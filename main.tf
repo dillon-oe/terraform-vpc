@@ -13,5 +13,4 @@ resource "aws_cloudformation_stack" "vpc" {
     EnvName = "${var.env}"
   }
   template_body = "${data.template_file.vpc_template.rendered}"
-  on_failure = "DELETE"
 }
